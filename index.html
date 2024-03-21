@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Document</title>
 </head>
 <body>
-    Hello World!
+    <h1>Movies Selector</h1>
+
+    <p>We provide names for rondomising</p>
+
+    <ul>
+        <li>Single text box type in the movie names</li>
+        <li>List that shows movies we have entered</li>
+        <li>A button to say go! to select a random option</li>
+        <li>A highlight on the random selected choice</li>
+    </ul>
+
+    <form action="#">
+        <label for="movie-name">Movie Name: </label>
+        <input name="movie-name" type="text">
+        <!-- We have a button here, javascript will handle hte behaviour, there is no backend at this stage
+        To be replaec with a submit input later -->
+        <input id="movie-name-submit-button" type="button" value="Submit">
+    </form>
+
+    <ul id="movie-list">
+        <!-- To be populated via the text field -->
+    </ul>
+
+    <button id="randomize-button">Randomize</button>
+
+    <div id="movie-result"></div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
