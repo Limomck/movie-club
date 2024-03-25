@@ -1,3 +1,8 @@
 body {
     background-color: steelblue;
 }
+
+.random-movie {
+    background-color: red;
+    opacity: 0.5;
+}
