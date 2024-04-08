@@ -1,8 +1,31 @@
 body {
     background-color: steelblue;
+    margin: 0;
 }
 
 .random-movie {
     background-color: red;
     opacity: 0.5;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+}
+
+#navbar {
+    display: flex;
+    background-color:lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: auto;
+}
+
+#navbar-title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#navbar-links {
+    display: flex;
 }
