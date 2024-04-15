@@ -6,26 +6,46 @@ body {
 .random-movie {
     background-color: red;
     opacity: 0.5;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 1px 8px #ddd;
+    background-color: white;
 }
 
 header li {
     list-style: none;
     display: inline-block;
+    padding: 0 20px;
 }
 
-#navbar {
-    display: flex;
-    background-color:lightgrey;
-    justify-content: space-around;
-    align-items: center;
+header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.5s ease 0s;
+}
+
+header a:hover {
+    color: #b2bfdb;
+}
+
+#nav-title {
     margin-right: auto;
+    font-size: 1.5em;
 }
 
-#navbar-title {
-    display: flex;
-    justify-content: flex-start;
+.close {
+    margin-left: 5px;
+    padding: 3px 3px 3px 3px;
+    color: white;
 }
 
-#navbar-links {
-    display: flex;
+.close:hover {
+    color: #555;
+    cursor: pointer;
 }

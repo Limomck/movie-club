@@ -8,16 +8,18 @@
 </head>
 <body>
 
-    <div id="navbar">
-        <div id="navbar-title">Movie Club Website</div>
-        <div id="navbar-links">
-            <span class="navbar-link">Home</span>
-            <span class="navbar-link">Forum</span>
-            <span class="navbar-link">Sign In</span>
-        </div>
-    </div>
+    <header>
+        <h1 id="nav-title">MOVIE CLUB</h1>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Movies Selector</h1>
+    <h1>Movie Selector</h1>
 
     <p>We provide names for rondomising</p>
 
@@ -26,6 +28,11 @@
         <li>List that shows movies we have entered</li>
         <li>A button to say go! to select a random option</li>
         <li>A highlight on the random selected choice</li>
+        <li>Allowing the Randomize button to set the background color of just the movie name rather than the whole row</li>
+        <li>Move the exisitng movie names into a span element</li>
+        <li>When creating a new movei, append the text into a span, and append the span into the li</li>
+        <li>When we add the class of selected-movie, instead of adding to the li, add it to the first child of the li</li>
+        <li>Add the background color to the class</li>
     </ul>
 
     <!-- <form action="#">
@@ -36,12 +43,14 @@
 
     <label for="movie-name">Movie Name: </label>
     <input id="movie-name" name="movie-name" type="text">
-    <button id="movie-name-submit-button">Submit</button>
+    <button id="movie-name-submit-button">+</button>
 
     <ul id="movie-list">
         <!-- To be populated via the text field -->
-        <li class="checked">Blade Runner</li>
-        <li>Big Fish</li>
+        <li class="movie">Blade Runner</li>
+        <li class="movie">Big Fish</li>
+        <li class="movie">The Matrix</li>
+        <li class="movie">Pirates of the Caribbean</li>
     </ul>
 
     <button id="randomize-button">Randomize</button>
