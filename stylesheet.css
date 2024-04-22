@@ -1,14 +1,4 @@
-body {
-    background-color: steelblue;
-    margin: 0;
-}
-
-.random-movie {
-    background-color: red;
-    opacity: 0.5;
-    color: white;
-}
-
+/*Header CSS*/
 header {
     display: flex;
     justify-content: flex-end;
@@ -37,6 +27,24 @@ header a:hover {
 #nav-title {
     margin-right: auto;
     font-size: 1.5em;
+}
+
+/*Body CSS*/
+body {
+    background-color: steelblue;
+    margin: 0;
+}
+
+
+/*Movie Selector CSS*/
+#movie-list li {
+    padding: 1px 1px;
+}
+
+.random-movie {
+    background-color: red;
+    opacity: 0.5;
+    color: white;
 }
 
 .close {

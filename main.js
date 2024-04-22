@@ -24,6 +24,12 @@ function addExisitngMoviesToArray() {
     for(var i = 0; i < movieList.children.length; i++) {
         movieArray.push(movieList.children[i].innerText);
     }
+
+    // Iterating over an array rather than using a for loop for each child element //
+    // Array.from(movieList.children).forEach((movie) => {
+    //     movieArray.push(movie.innerText);
+    // })
+
 }
 
 // Add the close button to the movie
@@ -33,7 +39,7 @@ function addCloseButtonsToExistingMovies() {
         var txt = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(txt);
-        movies[i].appendChild(span);
+        movies[i].parentElement.appendChild(span);
     }
 }
 
@@ -50,16 +56,6 @@ function addRemovalFunctionalityToExistingCloseButtons() {
     }
 }
 
-// Add the functionality to select a random movie
-randomizeButton.addEventListener("click", getRandomMovie);
-
-function getRandomMovie() {
-    for (i = 0; i < movieList.children.length; i++) {
-        movieList.children[i].classList.remove("random-movie");
-    }
-    movieList.children[Math.floor(Math.random() * movieList.children.length)].classList.add("random-movie");
-}
-
 // Add the functionality to add a movie by either hitting enter or clicking Submit
 movieNameSubmitButton.addEventListener("click", newMovie);
 movieName.addEventListener("keydown", (e) => {
@@ -70,10 +66,12 @@ movieName.addEventListener("keydown", (e) => {
 
 function newMovie() {
     var li = document.createElement("li");
-    li.classname = "movie";
+    var movieNameSpan = document.createElement("span");
+    movieNameSpan.className = "movie";
     var inputValue = movieName.value;
     var text = document.createTextNode(inputValue);
-    li.appendChild(text);
+    movieNameSpan.appendChild(text);
+    li.appendChild(movieNameSpan);
 
     if (inputValue === "") {
         alert("Movie name cannot be blank");
@@ -100,4 +98,14 @@ function newMovie() {
     })
 
     movieName.value = "";
+}
+
+// Add the functionality to select a random movie
+randomizeButton.addEventListener("click", getRandomMovie);
+
+function getRandomMovie() {
+    for (i = 0; i < movieList.children.length; i++) {
+        movieList.children[i].children[0].classList.remove("random-movie");
+    }
+    movieList.children[Math.floor(Math.random() * movieList.children.length)].children[0].classList.add("random-movie");
 }
